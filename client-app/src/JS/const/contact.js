@@ -1,0 +1,5 @@
+export const Post_contact="Post_contact"
+export const GET_contact="GET_contact"
+export const GET_contact_fail="GET_contact_fail"
+export const DELETE_contact="DELETE_contact"
+export const DELETE_contact_fail="DELETE_contact_fail"

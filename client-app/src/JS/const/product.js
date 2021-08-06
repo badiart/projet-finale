@@ -1,0 +1,9 @@
+export const Get_product_load="Get_product_load";
+export const Get_product_success="Get_product_success";
+export const Get_product_fail="Get_product_fail";
+export const delete_product="delete_product";
+export const Get_product="Get_product";
+export const Post_product="Post_product"
+export const Post_product_fail="Post_product_fail"
+export const Edit_product="Edit_product"
+export const delete_product_fail="delete_product_fail";
