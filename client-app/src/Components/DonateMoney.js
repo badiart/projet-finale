@@ -2,23 +2,39 @@ import React, { useEffect,useState } from 'react'
 import { useDispatch } from 'react-redux'
 import './DonateMoney.css';
 import { useSelector } from 'react-redux';
+import emailjs from 'emailjs-com'
+
 const DonateMoney = () => {
 const user = useSelector(state => state.userReducer.user)
   const [s, sets] = useState(0) 
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_vex5y2m', 'template_qoxt1qa', e.target, 'user_zDi0sMUteyzxrmPBzFOiH')
+      .then((result) => {
+          console.log(result.text);
+          alert('your email is sent successfully');
+      }, (error) => {
+          console.log(error.text);
+          alert('Oops... ' + JSON.stringify(error));
+      });
+      e.target.reset()
+  }
    return (
     <div className="body5" >
       <h1 style={{fontFamily:"cursive",color:"red",fontSize:"70px"}}>Donate to Bik N3ich</h1>
-      <div> <button style={{ margin: "5px" ,fontSize:"20px"}} className="button" >One off</button>
-        <button style={{ margin: "5px" ,fontSize:"20px"}} className="button">Monthly</button>
+      <div> <button style={{ margin: "5px" ,fontSize:"40px"}} className="buttondo" >One off</button>
+        <button style={{ margin: "5px" ,fontSize:"40px"}} className="buttondo
+        ">Monthly</button>
       </div>
       <h3>£10 a month over a year will get five prosthetic legs sent to a hospital in Africa</h3>
       
       <div>
-        <button   name="a" style={{ margin: "5px",fontSize:"20px" }} className="but" value="10" onClick={()=>user?sets(s+10):null} >10$</button>
-        <button name="b"style={{ margin: "5px",fontSize:"20px" }} className="but"  value="20" onClick={()=>user?sets(s+20):null} >20$</button>
-        <button name="c" style={{ margin: "5px",fontSize:"20px" }} className="but" value="50"  onClick={()=>user?sets(s+30):null} >50$</button>
-        <button style={{ margin: "5px" ,fontSize:"20px"}} className="but"  >{s}</button>
-       <button   style={{ margin: "5px",backgroundColor:"red" ,fontSize:"20px"}} className="but"  onClick={()=>(user&& user.isAdmin)?sets(0):null}>Reset</button>
+        <button   name="a" style={{ margin: "5px",fontSize:"40px" }} className="butdo" value="10" onClick={()=>user?sets(s+10):null} >10$</button>
+        <button name="b"style={{ margin: "5px",fontSize:"40px" }} className="butdo"  value="20" onClick={()=>user?sets(s+20):null} >20$</button>
+        <button name="c" style={{ margin: "5px",fontSize:"40px" }} className="butdo" value="50"  onClick={()=>user?sets(s+30):null} >50$</button>
+        <button style={{ margin: "5px" ,fontSize:"40px"}} className="butdo"  >{s}</button>
+       <button   style={{ margin: "5px",backgroundColor:"red" ,fontSize:"40px"}} className="butdo"  onClick={()=>(user&& user.isAdmin)?sets(0):null}>Reset</button>
       </div>
 
 
@@ -37,18 +53,18 @@ const user = useSelector(state => state.userReducer.user)
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <form action="/action_page.php" className="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+  <form  action="/action_page.php"  onSubmit={sendEmail} className="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
     <h2 className="w3-center">Contact Us</h2>
     <div className="w3-row w3-section">
       <div className="w3-col" style={{width: '50px'}}><i className="w3-xxlarge fa fa-user" /></div>
       <div className="w3-rest">
-        <input className="w3-input w3-border"  name="first" type="text" placeholder="First Name" />
+        <input className="w3-input w3-border"  name="firstname" type="text" placeholder="First Name" />
       </div>
     </div>
     <div className="w3-row w3-section">
       <div className="w3-col" style={{width: '50px'}}><i className="w3-xxlarge fa fa-user" /></div>
       <div className="w3-rest">
-        <input className="w3-input w3-border" name="last" type="text" placeholder="Last Name" />
+        <input className="w3-input w3-border" name="lastname" type="text" placeholder="Last Name" />
       </div>
     </div>
     <div className="w3-row w3-section">
@@ -60,7 +76,7 @@ const user = useSelector(state => state.userReducer.user)
     <div className="w3-row w3-section">
       <div className="w3-col" style={{width: '50px'}}><i className="w3-xxlarge fa fa-phone" /></div>
       <div className="w3-rest">
-        <input className="w3-input w3-border" name="phone" type="text" placeholder="Phone" />
+        <input className="w3-input w3-border" name="phonenumber" type="text" placeholder="Phone" />
       </div>
     </div>
     <div className="w3-row w3-section">

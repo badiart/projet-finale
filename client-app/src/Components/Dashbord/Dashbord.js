@@ -26,9 +26,10 @@ useEffect(() => {
            <Editprofil user={user}/>
 
         </div>
-        <div><div className="container">
+        <div  style={{marginRight:"90px"}}>
+          <div className="container">
   <div className="card-wrapper">
-    <div className="card">
+    <div className="card" >
       <div className="card-image" style={{width:"100%",marginTop:"2px"}}> 
       {user? 
         <img src={user.imge} alt="profile one"  />:null}
@@ -69,7 +70,7 @@ useEffect(() => {
 
 
 </div>
-<div className='dashboard_user'>
+<div className='dashboard_user' style={{marginRight:"40px"}}>
 { users?
 users.map(el=><Table  key={el._id} one={el}/>):<h2>loading</h2>}
         </div>

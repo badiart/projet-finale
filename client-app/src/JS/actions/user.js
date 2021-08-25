@@ -81,7 +81,7 @@ import {
     try {
         let result=await axios.put(`/user/${id}`,user);
        
-        dispatch({type:EDIT_USER,payload:result.data})
+       await dispatch({type:EDIT_USER,payload:result.data})
   dispatch(getuser())
     } catch (error) {
         console.log(error)

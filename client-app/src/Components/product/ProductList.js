@@ -11,10 +11,10 @@ const ProductList =() => {
         dispatch (getproducts());
     }, []);
     return (
-  <div className="prod-list">
+  <div className="prod-list"  >
     
 { loadproduct?<h2>loading</h2>
-:products.map(el=>< ProductNew    key={el._id} product={el}/>)}
+:products.map(el=>< ProductNew key={el._id} product={el}/>)}
 
  </div>
     )

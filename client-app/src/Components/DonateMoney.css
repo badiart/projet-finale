@@ -1,6 +1,6 @@
 
 /* for button */
-.button {
+.buttondo {
     background-color:green; /* Green */
     border: none;
     color: white;
@@ -12,7 +12,7 @@
     width:40%; 
     font-size: 30;
   }
-  .but{
+  .butdo{
     background-color:green; /* Green */
     border: none;
     color: white;

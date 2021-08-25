@@ -63,7 +63,7 @@ useEffect(() => {
           <h5 className="mb-0">Recent photos</h5><a href="#" className="btn btn-link text-muted">Show all</a>
         </div> */}
         <div className="row" style={{display:"flex",flexDirection:"row",width:"100%"}}>
-          <div className="col-lg-6 mb-2 pr-lg-1">
+          <div className="col-lg-6 mb-2 pr-lg-1" className="iheb">
         
             {products.filter(el=>el.username==user.name).map(el=><ProductNew product={el}/>)} </div>
         </div>

@@ -20,8 +20,8 @@ function Editprofiladmin({one}) {
     }, [])
     return (
     
-        <div>
-       <>
+        <>
+     
     <Button variant="light" onClick={handleShow}>Edit</Button>
 
     <Modal show={show} onHide={handleClose}>
@@ -44,13 +44,14 @@ function Editprofiladmin({one}) {
         </Button>
         <Button variant="primary" onClick={()=>{
           dispatch(edituser(one._id,{name,lastname,email,password,imge}));
-          handleClose()}}>
+          handleClose();
+          dispatch(edituser(one._id,{name,lastname,email,password,imge}));}}>
          save changes   
         </Button>
       </Modal.Footer>
     </Modal>
-  </>
-        </div>
+  
+        </>
     )
 }
 

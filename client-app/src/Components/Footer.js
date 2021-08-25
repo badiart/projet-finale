@@ -195,11 +195,11 @@ const Footer = () => {
     </div>
     {/* End Copyright */}
     {/* Back to top */}
-    <div id="back-to-top" className="back-to-top">
+    {/* <div id="back-to-top" className="back-to-top">
       <button className="btn btn-dark" title="Back to Top" style={{"display":"block"}}>
         <i className="fa fa-angle-up" />
       </button>
-    </div>
+    </div> */}
     {/* End Back to top */}
   </footer>
 </div>  

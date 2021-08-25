@@ -10,7 +10,7 @@ function ProductNew({product}) {
      getproducts()
     }, [])
     return (
-        <div style={{display:"flex",flexDirection:"row",marginBottom:"50px"}} >
+        <div style={{display:"flex",flexDirection:"row",marginBottom:"50px",marginRight:"50px",marginTop:"50px"}} >
        
             <div  className="badia" style={{height:"500px",width:"400px" ,marginBottom:"50px",marginLeft:"20px" }} className="card-sl">
               <div className="card-image" >

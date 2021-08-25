@@ -2,9 +2,9 @@ import React from 'react'
 import "./Shop.css"
 const Shop = () => {
     return (
-        <div className="bodysho">
-        <h1 style={{fontFamily:"cursive",color:"white"}}>This is our Shop</h1>
-        <h3 style={{fontFamily:"cursive",color:"white"}}>Bik N3ich has invested a lot in its workshop where nothing is left to chance, ultra sophisticated equipment is made available to its technicians so that they work harmoniously with each other.</h3>
+        <div className="bodysho" style={{fontFamily:"cursive"}}>
+        <h1 style={{fontFamily:"cursive",color:"black",fontSize:"70px"}}>This is our Shop</h1>
+        <h3 style={{fontFamily:"cursive",color:"black"}}>Bik N3ich has invested a lot in its workshop where nothing is left to chance, ultra sophisticated equipment is made available to its technicians so that they work harmoniously with each other.</h3>
         <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around" }}>
         <div   className='rect'>
         <div className="a-box">

@@ -19,9 +19,7 @@ function Editprofil({user}) {
   dispatch(getuser())
     }, [])
     return (
-    
-        <div>
-       <>
+        <>
     <Button variant="light" onClick={handleShow}>Edit</Button>
 
     <Modal show={show} onHide={handleClose}>
@@ -33,7 +31,8 @@ function Editprofil({user}) {
           onChange={(e)=>setName(e.target.value)}/></div>
            <div>LastName:<input style={{border:"1px solid", width:"400px",marginTop:"20px"}} value={lastname}
           onChange={(e)=>setlastname(e.target.value)}/></div>
-       <div>Email:<input style={{border:"1px solid", width:"400px",marginTop:"20px"}}  value={email} type="text"  onChange={(e)=>setemail(e.target.value)}/></div>
+       <div>Email:<input style={{border:"1px solid", width:"400px",marginTop:"20px"}}  value={email} type="text" 
+        onChange={(e)=>setemail(e.target.value)}/></div>
        <div>Password:<input style={{border:"1px solid", width:"400px",marginTop:"20px"}}  value={password} type="text"  onChange={(e)=>setpassword(e.target.value)}/></div>
    <div>Image:<input style={{border:"1px solid", width:"400px",marginTop:"20px"}}  value={imge} type="text"  onChange={(e)=>setimge(e.target.value)}/></div>
 
@@ -44,13 +43,13 @@ function Editprofil({user}) {
         </Button>
         <Button variant="primary" onClick={()=>{
           dispatch(edituser(user._id,{name,lastname,email,password,imge}));
-          handleClose()}}>
+          handleClose();dispatch(edituser(user._id,{name,lastname,email,password,imge}))}}>
          save changes   
         </Button>
       </Modal.Footer>
     </Modal>
-  </>
-        </div>
+ 
+        </>
     )
 }
 

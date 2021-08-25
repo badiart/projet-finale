@@ -14,8 +14,8 @@ const DonateProsthetics = () => {
     }, []);
     return (
         <div style={{backgroundImage: `url('https://html.sammy-codes.com/images/background.jpg')`}}>
-          <h1 style={{marginLeft:"50px",fontFamily:"Dancing Script ,cursive"}}>Donate Prosthetics</h1>  
-  <div  style={{dispaly:"flex",flexWrap:"wrap", flexDirection:"row",justifyContent:"space-around",width:"700px",height:"900px",marginLeft:"400px"}}>
+          <h1 style={{fontFamily:"Dancing Script ,cursive"}}>Donate Prosthetics</h1>  
+  <div  style={{dispaly:"flex",flexWrap:"wrap", flexDirection:"row",justifyContent:"space-around",width:"700px",height:"900px",marginLeft:"500px"}}>
 {/* { loadproduct?<h2>loading</h2>
 :products.map(el=><Add key={el._id} product={el}/>)} */}
 
